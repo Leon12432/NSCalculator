@@ -16,6 +16,7 @@ export class ExpressionService {
   // Voer een API call uit om een berekening uit te voeren
   public evaluateExpression(expression: string): Observable<Expression> {
     let params = new HttpParams();
+    // Encoding is nodig om tekens zoals de + mee te kunnen sturen
     params = params.append('expression', encodeURIComponent(expression));
 
     let result = this.httpClient.get<Expression>(this.baseUrl + 'api/Expressions/Evaluate/', { params });
