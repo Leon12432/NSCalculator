@@ -52,6 +52,8 @@ namespace NSCalculator.Controllers
 
             // Reken de expressie uit. Een FormatException geeft aan wanneer de input ongeldig is. 
             // Door het af te vangen wordt dit ook goed aan de client doorgegeven middels een 400 response
+            // De evaluatie in de controller afhandelen zou deze klasse behoorlijk vervuilen en niet herbruikbaar zijn. 
+            // Vandaar een aparte klasse daarvoor.
             try
             {
                 result = ExpressionEvaluator.EvaluateExpression(decodedExpression);
