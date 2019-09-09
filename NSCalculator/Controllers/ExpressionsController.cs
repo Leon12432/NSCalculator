@@ -33,7 +33,8 @@ namespace NSCalculator.Controllers
             return Ok(items.Take(5));
         }
 
-        // Reken een expressie uit en sla het resultaat op in de context.
+        // Reken een expressie uit en sla het resultaat op in de context. 
+        // Kan in principe ook een POST zijn, maar omdat het opslaan van het resultaat niet de belangrijkste functie is heb ik het zo gedaan
         // GET: api/Expressions/Evaluate
         [HttpGet("Evaluate")]
         public async Task<ActionResult<Expression>> EvaluateExpression(string expression)
