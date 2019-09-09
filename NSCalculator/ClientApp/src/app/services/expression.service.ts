@@ -23,7 +23,7 @@ export class ExpressionService {
     return result;
   }
 
-  // Voer een API call uit om de laatste 5 berekeningen op te halen
+  // Voer een API call uit om de laatste 5 berekeningen op te halen. Voer .next() uit om alle subscribers te informeren over de nieuwe state
   public getExpressions(): Observable<Expression[]> {
     this.httpClient.get<Expression[]>(this.baseUrl + 'api/Expressions')
       .subscribe(result => this.expressions.next(result));
