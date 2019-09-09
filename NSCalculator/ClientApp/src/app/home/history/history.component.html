@@ -1,0 +1,16 @@
+<p *ngIf="!expressions"><em>Aan het laden...</em></p>
+
+<table class='table table-striped' *ngIf="expressions">
+  <thead>
+    <tr>
+      <th>Berekening</th>
+      <th>Resultaat</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let expression of expressions">
+      <td>{{ expression.expressionText }}</td>
+      <td>{{ expression.expressionResult }}</td>
+    </tr>
+  </tbody>
+</table>

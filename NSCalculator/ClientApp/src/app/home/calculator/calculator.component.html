@@ -1,0 +1,76 @@
+<div class="row" *ngIf="showBadRequestPopup">
+  <div class="col">
+    <div class="alert alert-danger" role="alert">
+      Er is een fout opgetreden: Ongeldige invoer
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col">
+    <input type="text" id="expressionInput" class="form-control" value="{{ currentExpression }}" readonly />
+  </div>
+</div>
+<div class="row pt-3">
+  <div class="col">
+    <button type="button" class="btn btn-danger btn-block" (click)="deleteInput()">DEL</button>
+  </div>
+  <div class="col">
+    <button type="button" class="btn btn-success btn-block" (click)="evaluateInput()">=</button>
+  </div>
+</div>
+<div class="row pt-3">
+  <div class="col">
+    <button type="button" class="btn btn-primary btn-block" (click)="addInput('7')">7</button>
+  </div>
+  <div class="col">
+    <button type="button" class="btn btn-primary btn-block" (click)="addInput('8')">8</button>
+  </div>
+  <div class="col">
+    <button type="button" class="btn btn-primary btn-block" (click)="addInput('9')">9</button>
+  </div>
+  <div class="col">
+    <button type="button" class="btn btn-secondary btn-block" (click)="addInput('+')">+</button>
+  </div>
+</div>
+<div class="row pt-3">
+  <div class="col">
+    <button type="button" class="btn btn-primary btn-block" (click)="addInput('4')">4</button>
+  </div>
+  <div class="col">
+    <button type="button" class="btn btn-primary btn-block" (click)="addInput('5')">5</button>
+  </div>
+  <div class="col">
+    <button type="button" class="btn btn-primary btn-block" (click)="addInput('6')">6</button>
+  </div>
+  <div class="col">
+    <button type="button" class="btn btn-secondary btn-block" (click)="addInput('-')">-</button>
+  </div>
+</div>
+<div class="row pt-3">
+  <div class="col">
+    <button type="button" class="btn btn-primary btn-block" (click)="addInput('1')">1</button>
+  </div>
+  <div class="col">
+    <button type="button" class="btn btn-primary btn-block" (click)="addInput('2')">2</button>
+  </div>
+  <div class="col">
+    <button type="button" class="btn btn-primary btn-block" (click)="addInput('3')">3</button>
+  </div>
+  <div class="col">
+    <button type="button" class="btn btn-secondary btn-block" (click)="addInput('*')">*</button>
+  </div>
+</div>
+<div class="row pt-3">
+  <div class="col">
+    <button type="button" class="btn btn-primary btn-block" (click)="addInput('0')">0</button>
+  </div>
+  <div class="col">
+    <button type="button" class="btn btn-secondary btn-block" (click)="addInput('.')">.</button>
+  </div>
+  <div class="col">
+    <button type="button" class="btn btn-secondary btn-block" (click)="addInput('^')">^</button>
+  </div>
+  <div class="col">
+    <button type="button" class="btn btn-secondary btn-block" (click)="addInput('/')">/</button>
+  </div>
+</div>
