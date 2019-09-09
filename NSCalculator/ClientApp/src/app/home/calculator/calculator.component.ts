@@ -8,7 +8,7 @@ import { ExpressionService } from '../../services/expression.service';
   templateUrl: './calculator.component.html',
 })
 export class CalculatorComponent {
-  private currentExpression = "";
+  public currentExpression = "";
   public showBadRequestPopup = false;
 
   constructor(private expressionService: ExpressionService) {
